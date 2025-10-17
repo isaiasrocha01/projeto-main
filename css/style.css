@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f1f1f1;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body.sobre {
+  background: url("../img/nas.jpg") center/cover no-repeat fixed;
+  font-family: 'Poppins', sans-serif;
+  margin: 12px;
+  background: linear-gradient(180deg, #06040a 0%, #0b0620 100%);
+  color: var(--muted);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+}
+
+
+header.projeto,
+header.calculadora {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2a5d9f;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 12px 0;
+  z-index: 1000;
+  background-color: #1a1a1a;
+  /* precisa de fundo para sobreposição */
+}
+
+.nav-centralizado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-centralizado a {
+  background: #111;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-centralizado a:hover {
+  background: linear-gradient(145deg, #2a5d9f, #47a7f5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(42, 93, 159, 0.35);
+}
+
+.logo-menu {
+  height: 40px;
+}
+
+/* ===== HERO ===== */
+.topo-do-site {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 140px 20px 90px;
+  gap: 50px;
+  margin-top: 80px;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  color: #f4f4f4;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.txt-topo-site h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: #02a702;
+  margin-bottom: 20px;
+}
+.meio-do-site-sobre h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: #02a702;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.txt-topo-site span {
+  color: #fff;
+  font-weight: 400;
+}
+
+.txt-topo-site p {
+  max-width: 500px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: #ddd;
+}
+
+.img-topo-site img {
+  width: clamp(220px, 28vw, 320px);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.img-topo-site img:hover {
+  transform: scale(1.07) rotate(-1deg);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.7);
+}
+
+.btn-contato button {
+  background: linear-gradient(145deg, #47e047, #02a702);
+  border: none;
+  color: #000;
+  padding: 12px 22px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-contato button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== PROJETOS ===== */
+.meio-do-site {
+  background: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.meio-do-site h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: #222;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.projetos-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* permite quebrar linha */
+  gap: 40px;
+  max-width: 1200px;
+  /* largura máxima para não grudar nas bordas */
+  margin: 0 auto;
+  /* centraliza */
+  padding: 20px;
+}
+
+
+.projetos-grid .projeto {
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 20px;
+  width: 240px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.projetos-grid .projeto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.projetos-grid .projeto img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.projetos-grid .projeto button {
+  background: linear-gradient(145deg, #47e047, #02a702);
+  border: none;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.projetos-grid .projeto button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.btn-projetos button {
+  background: linear-gradient(145deg, #47e047, #02a702);
+  border: none;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn-projetos button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+footer .social a {
+  font-size: 28px;
+  color: #02a702;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social a:hover {
+  color: #fff;
+  transform: scale(1.25);
+}
+
+#Calc {
+  width: 320px;
+  /* antes era 400px */
+  padding: 0.8em;
+  background-color: #bfe7f7;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#operations {
+  text-align: right;
+}
+
+#current-operation,
+#previous-operation {
+  overflow-wrap: break-word;
+  padding: .2em;
+  min-height: 1.6em;
+}
+
+#previous-operation {
+  color: #777;
+}
+
+/* DISPLAY NUMÉRICO TAMBÉM AJUSTADO */
+#current-operation {
+  font-size: 2.4em;
+  /* antes 3em */
+}
+
+#buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1px;
+}
+
+#buttons-container button {
+  border: 1px solid transparent;
+  border-radius: 0;
+  height: 2.5em;
+  /* antes 4em */
+  font-size: 1.2em;
+  background-color: #0754b8;
+  cursor: pointer;
+}
+
+#buttons-container .number {
+  background-color: #0680d1;
+}
+
+#buttons-container button:hover {
+  background-color: #0f788d;
+  border-color: #070707;
+}
+
+#buttons-container #equal-btn {
+  grid-column: span 2;
+  background-color: #75a5cb;
+}
+
+#buttons-container #equal-btn:hover {
+  background-color: #3a91d8;
+}
+
+#current-operation,
+#previous-operation {
+  font-family: 'Roboto Mono', monospace;
+  /* Deixa estilo calculadora */
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+
+/* ===== RESPONSIVO ===== */
+@media (max-width:992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .img-topo-site img {
+    width: 240px;
+  }
+
+  .projetos-grid {
+    gap: 25px;
+  }
+
+  .btn-projetos button {
+    width: 200px;
+  }
+}
+
+@media (max-width:576px) {
+  .txt-topo-site h1, .meio-do-site-sobre h1  {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+
+  .txt-topo-site p {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+  }
+
+  .img-topo-site img {
+    width: 200px;
+  }
+
+  .projetos-grid .projeto {
+    width: 180px;
+  }
+
+  .btn-projetos button {
+    width: 200px;
+  }
+}
+
+/* ===== CENTRALIZAR CALCULADORA ===== */
+.meio-do-site-calculadora {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* sobe o conteúdo */
+  padding-top: 110px;
+  /* ajusta a distância do menu */
+}
+
+body.calculadora {
+  background: url("../img/nas.jpg") center/cover no-repeat fixed;
+}
+
+.meio-do-site-sobre {
+  text-align: justify;
+  /* espaçamento entre linhas */
+  max-width: 800px;
+  /* largura máxima do texto */
+  margin: 2em auto;
+  /* centraliza a seção */
+  padding: 0 1em;
+  /* espaço interno */
+  line-height: 1;
+  /* espaçamento entre linhas */
+  font-size: 1.1em;
+  /* tamanho da fonte */
+  color: #f0f0f0;
+  /* cor do texto, ajusta ao fundo */
+}
+
+.meio-do-site-sobre ul {
+  margin-left: 1.5em;
+}
+

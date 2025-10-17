@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Termo - Casamento Religioso com Efeito Civil</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="rel">
+  <header class="header-gerador-rel">
+    <nav class="nav-centralizado">
+      <a href="../../index.html"><img src="../../imagens/agenciair.png" alt="Logo IR" class="logo-menu" /> Home</a>
+      <a href="../gerador.html"><button class="button-rel">🏠 Home Gerador</button></a>
+      <a href="../nascimento/nascimento.html"><button class="button-rel">👶 Nascimento</button></a>
+
+      <div class="dropdown">
+        <button class="button-rel">💍 Casamento</button>
+        <div class="dropdown-content">
+          <a href="../casamento civil/casamento civil.html">💼 Civil</a>
+          <a href="../casamento religioso com efeito civil/casamento religioso com efeito civil.html">⛪ Religioso</a>
+        </div>
+      </div>
+
+      <a href="../obito/obito.html"><button class="button-rel">⚰️ Óbito</button></a>
+      <a href="../contato/contato.html"><button class="button-rel">📞 Contato</button></a>
+    </nav>
+  </header>
+
+  <div class="container topo-do-site">
+    <h2 class="rel">Gerador de Termo - Casamento Religioso com Efeito Civil</h2>
+    <form id="form">
+      <div>
+        <label>Data do Termo</label>
+        <input type="date" id="dataTermo">
+      </div>
+      <div>
+        <label>Data do Casamento</label>
+        <input type="date" id="dataCasamento">
+      </div>
+      <div>
+        <label>Afixado o Edital de Proclamas</label>
+        <input type="date" id="dataTermoEdital">
+      </div>
+      <div>
+        <label>Publicado pelo Diário do Poder Judiciário</label>
+        <input type="date" id="dataTermoDiario">
+      </div>
+      <!-- Celebrante -->
+      <div>
+        <label>Celebrante</label>
+        <input type="text" id="celebrante" placeholder="Ex: PADRE">
+      </div>
+      <div>
+        <label>Local da Celebração</label>
+        <input type="text" id="localdaCelebracao" placeholder="Ex: Forum Ruy Barbosa">
+      </div>
+
+      <!-- Regime de Bens -->
+      <div>
+        <label>Regime de Bens</label>
+        <select id="RegimedeBens">
+          <option value="">Selecione</option>
+          <option value="Comunhão Parcial de Bens">Comunhão Parcial de Bens</option>
+          <option value="Comunhão Universal de Bens">Comunhão Universal de Bens</option>
+          <option value="Separação Total de Bens">Separação Total de Bens</option>
+          <option value="Comunhão de Bens">Comunhão de Bens</option>
+          <option value="Separação de Bens">Separação de Bens</option>
+          <option value="IGNORADO">Ignorado</option>
+        </select>
+      </div>
+
+      <!-- Cônjuge1 -->
+      <div class="full" style="margin-top:10px;"><strong>Dados do Cônjuge 1</strong></div>
+
+      <!-- Nome do Cônjuge 1 + Gênero lado a lado -->
+      <div>
+        <label>Nome do Cônjuge 1</label>
+        <input type="text" id="nomeCônjuge1" placeholder="Ex: João">
+      </div>
+      <div>
+        <label>Passou a Adotar o Nome</label>
+        <input type="text" id="nomeAtualCônjuge1" placeholder="Ex: João">
+      </div>
+      <!-- CPF -->
+      <div>
+        <label>CPF:</label>
+        <input type="text" id="cpf1" placeholder="Ex: 000.000.000-00">
+      </div>
+      <div>
+        <label>Gênero</label>
+        <select id="genero1">
+          <option value="">Selecione</option>
+          <option value="O CONTRAENTE:">Masculino</option>
+          <option value="A CONTRAENTE:">Feminino</option>
+        </select>
+      </div>
+      <div>
+        <label>Data de Nascimento</label>
+        <input type="date" id="dataNascimento1">
+      </div>
+      <div>
+        <label>Profissão</label>
+        <input type="text" id="profissao1" placeholder="Ex: Herói">
+      </div>
+      <div>
+        <label>Naturalidade</label>
+        <input type="text" id="natural1" placeholder="Ex: Bahia">
+      </div>
+      <div>
+        <label for="nacionalidade">Nacionalidade:</label>
+        <select id="nacionalidade1" name="nacionalidade" required>
+          <option value="AFEGÃ">AFEGÃ</option>
+          <option value="SUL-AFRICANA">SUL-AFRICANA</option>
+          <option value="ALEMÃ">ALEMÃ</option>
+          <option value="ANDORRANA">ANDORRANA</option>
+          <option value="ANGOLANA">ANGOLANA</option>
+          <option value="SAUDITA">SAUDITA</option>
+          <option value="ARGELINA">ARGELINA</option>
+          <option value="ARGENTINA">ARGENTINA</option>
+          <option value="ARMÊNIA">ARMÊNIA</option>
+          <option value="AUSTRALIANA">AUSTRALIANA</option>
+          <option value="AUSTRÍACA">AUSTRÍACA</option>
+          <option value="BANGLADESHIANA">BANGLADESHÍANA</option>
+          <option value="BELGA">BELGA</option>
+          <option value="BOLIVIANA">BOLIVIANA</option>
+          <option value="BRASILEIRA">BRASILEIRA</option>
+          <option value="BÚLGARA">BÚLGARA</option>
+          <option value="CANADENSE">CANADENSE</option>
+          <option value="CHILENA">CHILENA</option>
+          <option value="CHINESA">CHINESA</option>
+          <option value="COLOMBIANA">COLOMBIANA</option>
+          <option value="COREANA">COREANA</option>
+          <option value="COSTARRIQUENHA">COSTARRIQUENHA</option>
+          <option value="CROATA">CROATA</option>
+          <option value="CUBANA">CUBANA</option>
+          <option value="DINAMARQUESA">DINAMARQUESA</option>
+          <option value="EGÍPCIA">EGÍPCIA</option>
+          <option value="EMIRADENSE">EMIRADENSE</option>
+          <option value="EQUATORIANA">EQUATORIANA</option>
+          <option value="ESCOCESA">ESCOCESA</option>
+          <option value="ESLOVACA">ESLOVACA</option>
+          <option value="ESLOVENA">ESLOVENA</option>
+          <option value="ESPANHOLA">ESPANHOLA</option>
+          <option value="ESTADUNIDENSE">ESTADUNIDENSE</option>
+          <option value="ESTONIANA">ESTONIANA</option>
+          <option value="FILIPINA">FILIPINA</option>
+          <option value="FINLANDESA">FINLANDESA</option>
+          <option value="FRANCESA">FRANCESA</option>
+          <option value="GALESA">GALESA</option>
+          <option value="GREGA">GREGA</option>
+          <option value="GUATEMALTECA">GUATEMALTECA</option>
+          <option value="HAITIANA">HAITIANA</option>
+          <option value="HOLANDESA">HOLANDESA</option>
+          <option value="HONDURENHA">HONDURENHA</option>
+          <option value="HÚNGARA">HÚNGARA</option>
+          <option value="INDIANA">INDIANA</option>
+          <option value="INDONÉSIA">INDONÉSIA</option>
+          <option value="IRANIANA">IRANIANA</option>
+          <option value="IRAQUIANA">IRAQUIANA</option>
+          <option value="IRLANDESA">IRLANDESA</option>
+          <option value="ISRAELENSE">ISRAELENSE</option>
+          <option value="ITALIANA">ITALIANA</option>
+          <option value="JAMAICANA">JAMAICANA</option>
+          <option value="JAPONESA">JAPONESA</option>
+          <option value="JORDANIANA">JORDANIANA</option>
+          <option value="KUWAITIANA">KUWAITIANA</option>
+          <option value="LIBANESA">LIBANESA</option>
+          <option value="LUXEMBURGUESA">LUXEMBURGUESA</option>
+          <option value="MEXICANA">MEXICANA</option>
+          <option value="MOÇAMBICANA">MOÇAMBICANA</option>
+          <option value="NEOZELANDESA">NEOZELANDESA</option>
+          <option value="NICARAGUENSE">NICARAGUENSE</option>
+          <option value="NIGERIANA">NIGERIANA</option>
+          <option value="NORUEGUESA">NORUEGUESA</option>
+          <option value="PANAMENHA">PANAMENHA</option>
+          <option value="PARAGUAIA">PARAGUAIA</option>
+          <option value="PERUANA">PERUANA</option>
+          <option value="POLONESA">POLONESA</option>
+          <option value="PORTUGUESA">PORTUGUESA</option>
+          <option value="QUENIANA">QUENIANA</option>
+          <option value="ROMENA">ROMENA</option>
+          <option value="RUSSA">RUSSA</option>
+          <option value="SÉRVIA">SÉRVIA</option>
+          <option value="SINGAPURENSE">SINGAPURENSE</option>
+          <option value="SÍRIA">SÍRIA</option>
+          <option value="SUECA">SUECA</option>
+          <option value="SUÍÇA">SUÍÇA</option>
+          <option value="TAILANDESA">TAILANDESA</option>
+          <option value="TURCA">TURCA</option>
+          <option value="UCRANIANA">UCRANIANA</option>
+          <option value="URUGUAIA">URUGUAIA</option>
+          <option value="VENEZUELANA">VENEZUELANA</option>
+          <option value="VIETNAMITA">VIETNAMITA</option>
+          <option value="ZIMBABUENSE">ZIMBABUENSE</option>
+        </select>
+      </div>
+      <div>
+        <label>Estado Civil</label>
+        <select id="civil1">
+          <option value="">Selecione</option>
+          <option value="Solteiro(a)">Solteiro(a)</option>
+          <option value="Casado(a)">Casado(a)</option>
+          <option value="Divorciado(a)">Divorciado(a)</option>
+          <option value="Viúvo(a)">Viúvo(a)</option>
+          <option value="Separado(a)">Separado(a)</option>
+          <option value="Desquitado(a)">Desquitado(a)</option>
+          <option value="IGNORADO">Ignorado</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Endereço:</label>
+        <input type="text" id="endereco1" placeholder="Ex: Rua X">
+      </div>
+      <div>
+        <div class="full" style="margin-top:9px;"><strong>Filiação:</strong></div>
+        <input type="text" id="filiacao1" placeholder="Ex: João e Maria">
+      </div>
+
+      <!-- Cônjuge2 -->
+      <div class="full" style="margin-top:9px;"><strong>Dados do Cônjuge 2</strong></div>
+
+      <!-- Nome do Cônjuge 2  -->
+      <div>
+        <label>Nome do Cônjuge 2</label>
+        <input type="text" id="nomeCônjuge2" placeholder="Ex: João">
+      </div>
+      <div>
+        <label>Passou a Adotar o Nome</label>
+        <input type="text" id="nomeAtualCônjuge2" placeholder="Ex: João">
+      </div>
+      <div>
+        <label>CPF:</label>
+        <input type="text" id="cpf2" placeholder="Ex: 000.000.000-00">
+      </div>
+      <div>
+        <label>Gênero</label>
+        <select id="genero2">
+          <option value="">Selecione</option>
+          <option value="O CONTRAENTE:">Masculino</option>
+          <option value="A CONTRAENTE:">Feminino</option>
+        </select>
+      </div>
+      <div>
+        <label>Data de Nascimento</label>
+        <input type="date" id="dataNascimento2">
+      </div>
+      <div>
+        <label>Profissão</label>
+        <input type="text" id="profissao2" placeholder="Ex: Herói">
+      </div>
+      <div>
+        <label>Naturalidade</label>
+        <input type="text" id="natural2" placeholder="Ex: Bahia">
+      </div>
+      <div>
+        <label for="nacionalidade">Nacionalidade:</label>
+        <select id="nacionalidade2" name="nacionalidade" required>
+          <option value="">Selecione um país</option>
+          <option value="AFEGÃ">AFEGÃ</option>
+          <option value="SUL-AFRICANA">SUL-AFRICANA</option>
+          <option value="ALEMÃ">ALEMÃ</option>
+          <option value="ANDORRANA">ANDORRANA</option>
+          <option value="ANGOLANA">ANGOLANA</option>
+          <option value="SAUDITA">SAUDITA</option>
+          <option value="ARGELINA">ARGELINA</option>
+          <option value="ARGENTINA">ARGENTINA</option>
+          <option value="ARMÊNIA">ARMÊNIA</option>
+          <option value="AUSTRALIANA">AUSTRALIANA</option>
+          <option value="AUSTRÍACA">AUSTRÍACA</option>
+          <option value="BANGLADESHIANA">BANGLADESHÍANA</option>
+          <option value="BELGA">BELGA</option>
+          <option value="BOLIVIANA">BOLIVIANA</option>
+          <option value="BRASILEIRA">BRASILEIRA</option>
+          <option value="BÚLGARA">BÚLGARA</option>
+          <option value="CANADENSE">CANADENSE</option>
+          <option value="CHILENA">CHILENA</option>
+          <option value="CHINESA">CHINESA</option>
+          <option value="COLOMBIANA">COLOMBIANA</option>
+          <option value="COREANA">COREANA</option>
+          <option value="COSTARRIQUENHA">COSTARRIQUENHA</option>
+          <option value="CROATA">CROATA</option>
+          <option value="CUBANA">CUBANA</option>
+          <option value="DINAMARQUESA">DINAMARQUESA</option>
+          <option value="EGÍPCIA">EGÍPCIA</option>
+          <option value="EMIRADENSE">EMIRADENSE</option>
+          <option value="EQUATORIANA">EQUATORIANA</option>
+          <option value="ESCOCESA">ESCOCESA</option>
+          <option value="ESLOVACA">ESLOVACA</option>
+          <option value="ESLOVENA">ESLOVENA</option>
+          <option value="ESPANHOLA">ESPANHOLA</option>
+          <option value="ESTADUNIDENSE">ESTADUNIDENSE</option>
+          <option value="ESTONIANA">ESTONIANA</option>
+          <option value="FILIPINA">FILIPINA</option>
+          <option value="FINLANDESA">FINLANDESA</option>
+          <option value="FRANCESA">FRANCESA</option>
+          <option value="GALESA">GALESA</option>
+          <option value="GREGA">GREGA</option>
+          <option value="GUATEMALTECA">GUATEMALTECA</option>
+          <option value="HAITIANA">HAITIANA</option>
+          <option value="HOLANDESA">HOLANDESA</option>
+          <option value="HONDURENHA">HONDURENHA</option>
+          <option value="HÚNGARA">HÚNGARA</option>
+          <option value="INDIANA">INDIANA</option>
+          <option value="INDONÉSIA">INDONÉSIA</option>
+          <option value="IRANIANA">IRANIANA</option>
+          <option value="IRAQUIANA">IRAQUIANA</option>
+          <option value="IRLANDESA">IRLANDESA</option>
+          <option value="ISRAELENSE">ISRAELENSE</option>
+          <option value="ITALIANA">ITALIANA</option>
+          <option value="JAMAICANA">JAMAICANA</option>
+          <option value="JAPONESA">JAPONESA</option>
+          <option value="JORDANIANA">JORDANIANA</option>
+          <option value="KUWAITIANA">KUWAITIANA</option>
+          <option value="LIBANESA">LIBANESA</option>
+          <option value="LUXEMBURGUESA">LUXEMBURGUESA</option>
+          <option value="MEXICANA">MEXICANA</option>
+          <option value="MOÇAMBICANA">MOÇAMBICANA</option>
+          <option value="NEOZELANDESA">NEOZELANDESA</option>
+          <option value="NICARAGUENSE">NICARAGUENSE</option>
+          <option value="NIGERIANA">NIGERIANA</option>
+          <option value="NORUEGUESA">NORUEGUESA</option>
+          <option value="PANAMENHA">PANAMENHA</option>
+          <option value="PARAGUAIA">PARAGUAIA</option>
+          <option value="PERUANA">PERUANA</option>
+          <option value="POLONESA">POLONESA</option>
+          <option value="PORTUGUESA">PORTUGUESA</option>
+          <option value="QUENIANA">QUENIANA</option>
+          <option value="ROMENA">ROMENA</option>
+          <option value="RUSSA">RUSSA</option>
+          <option value="SÉRVIA">SÉRVIA</option>
+          <option value="SINGAPURENSE">SINGAPURENSE</option>
+          <option value="SÍRIA">SÍRIA</option>
+          <option value="SUECA">SUECA</option>
+          <option value="SUÍÇA">SUÍÇA</option>
+          <option value="TAILANDESA">TAILANDESA</option>
+          <option value="TURCA">TURCA</option>
+          <option value="UCRANIANA">UCRANIANA</option>
+          <option value="URUGUAIA">URUGUAIA</option>
+          <option value="VENEZUELANA">VENEZUELANA</option>
+          <option value="VIETNAMITA">VIETNAMITA</option>
+          <option value="ZIMBABUENSE">ZIMBABUENSE</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Estado Civil</label>
+        <select id="civil2">
+          <option value="">Selecione</option>
+          <option value="Solteiro(a)">Solteiro(a)</option>
+          <option value="Casado(a)">Casado(a)</option>
+          <option value="Divorciado(a)">Divorciado(a)</option>
+          <option value="Viúvo(a)">Viúvo(a)</option>
+          <option value="Separado(a)">Separado(a)</option>
+          <option value="Desquitado(a)">Desquitado(a)</option>
+          <option value="IGNORADO">Ignorado</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Endereço:</label>
+        <input type="text" id="endereco2" placeholder="Ex: Rua X">
+      </div>
+      <div>
+        <div class="full" style="margin-top:9px;"><strong>Filiação:</strong></div>
+        <input type="text" id="filiacao2" placeholder="Ex: João e Maria">
+      </div>
+
+      <div class="full" style="margin-top:10px;"><strong>Testemunhas</strong>
+        <input type="text" id="testemunhas" placeholder="Ex: MATHEUS">
+      </div>
+    </form>
+    <div class="btns">
+      <button id="gerar" type="button">Gerar Termo</button>
+      <button id="copiar" type="button">Copiar</button>
+      <button id="limpar" type="button" style="background:#a72b2b;">Limpar</button>
+    </div>
+    <h3>Termo Gerado:</h3>
+    <textarea id="termo" readonly></textarea>
+  </div>
+
+  <footer>© Desenvolvido por Isaias Rocha</footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

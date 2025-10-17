@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Dia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/calendario_compacto.css">
+</head>
+
+<body class="cald">
+  <header class="cald">
+    <nav class="nav-centralizado">
+      <a href="../index.html"><img src="../imagens/agenciair.png" alt="Logo IR" class="logo-menu" /> 🏠 Home</a>
+      <a href="../curriculo/curriculo.html" target="_blank">Especialidades</a>
+      <a href="../curriculo/sobre.html">Sobre</a>
+      <a href="../projetos/projetos.html">Projetos</a>
+      <a href="../gerador/contato/contato.html">📞 Contato</a>
+    </nav>
+  </header>
+  <section class="meio-do-site-cald">
+    <div class="container" id="app">
+      <div class="top">
+        <div>
+          <h1 id="dateTitle"></h1>
+          <div class="subtitle" id="weekdayTitle"></div>
+        </div>
+        <div class="navs">
+          <button id="backBtn" class="btn">Voltar</button>
+          <button id="prevDay" class="btn">◀ Dia</button>
+          <button id="nextDay" class="btn">Dia ▶</button>
+        </div>
+      </div>
+      <div class="content">
+        <div>
+          <div class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <div><strong>Eventos</strong></div>
+              <div class="small" id="eventsCount">0</div>
+            </div>
+            <div id="eventsList" class="event-list">
+              <div class="empty">Nenhum evento. Adicione à direita.</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="form">
+            <label class="small">Hora (opcional)</label>
+            <input type="time" id="eventTime">
+            <label class="small">Título</label>
+            <input type="text" id="eventTitle" placeholder="Ex: Consulta, Aniversário">
+            <label class="small">Descrição</label>
+            <textarea id="eventDesc" placeholder="Detalhes do evento (opcional)"></textarea>
+            <label class="meta-checkbox"><input type="checkbox" id="eventMeta"> É uma meta</label>
+            <label class="meta-name small">Nome da meta (opcional)</label>
+            <input type="text" id="metaName" placeholder="Ex: Corrida, Leitura">
+            <div class="actions">
+              <button id="clearBtn" class="btn danger">Limpar</button>
+              <button id="saveBtn" class="btn accent">Salvar Evento</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="day-script.js"></script>
+</body>
+
+</html>

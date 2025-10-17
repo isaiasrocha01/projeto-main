@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Termo - Óbito</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="obt">
+    <header class="header-gerador-obt"> 
+    <nav class="nav-centralizado">
+      <a href="../../index.html"><img src="../../imagens/agenciair.png" alt="Logo IR" class="logo-menu" /> Home</a>
+      <a href="../gerador.html"><button class="button-obt">🏠 Home Gerador</button></a>
+      <a href="../nascimento/nascimento.html"><button class="button-obt">👶 Nascimento</button></a>
+
+      <div class="dropdown">
+        <button class="button-obt">💍 Casamento</button>
+        <div class="dropdown-content">
+          <a href="../casamento civil/casamento civil.html">💼 Civil</a>
+          <a href="../casamento religioso com efeito civil/casamento religioso com efeito civil.html">⛪ Religioso</a>
+        </div>
+      </div> 
+
+      <a href="../obito/obito.html"><button class="button-obt">⚰️ Óbito</button></a>
+      <a href="../contato/contato.html"><button class="button-obt">📞 Contato</button></a>
+    </nav>
+  </header>
+
+  <div class="container topo-do-site">
+      <h2 class="obt">Gerador de Termo - Óbito</h2>
+    <form id="form">
+      <div>
+        <label>Data do Termo</label>
+        <input type="date" id="dataTermo">
+      </div>
+      <div>
+        <label>Declarante</label>
+        <input type="text" id="declarante" placeholder="Ex: MATHEUS">
+      </div>
+
+      <div>
+        <label>Data do Óbito</label>
+        <input type="date" id="dataObito">
+      </div>
+      <div>
+        <label>Hospital/Local</label>
+        <input type="text" id="hospital" placeholder="Ex: HOSPITAL SANTO AMARO, SALVADOR-BA">
+      </div>
+
+      <div>
+        <label>Hora</label>
+        <input type="text" id="hora" placeholder="Ex: 19">
+      </div>
+      <div>
+        <label>Minuto</label>
+        <input type="text" id="minuto" placeholder="Ex: 26">
+      </div>
+
+      <!-- Falecido -->
+      <div class="full" style="margin-top:10px;"><strong>Dados do Falecido</strong></div>
+
+      <!-- Nome + Gênero lado a lado -->
+      <div>
+        <label>Nome</label>
+        <input type="text" id="nomeFalecido" placeholder="Ex: João">
+      </div>
+      <div>
+        <label>Gênero</label>
+        <select id="genero">
+          <option value="">Selecione</option>
+          <option value="MASCULINO">Masculino</option>
+          <option value="FEMININO">Feminino</option>
+          <option value="IGNORADO">Ignorado</option>
+        </select>
+      </div>
+
+      <!-- CPF + Idade lado a lado -->
+      <div>
+        <label>CPF:</label>
+        <input type="text" id="cpf" placeholder="Ex: 000.000.000-00">
+      </div>
+      <div>
+        <label>Idade:</label>
+        <input type="text" id="idade" placeholder="Ex: 59 anos">
+      </div>
+
+      <!-- Estado civil + Endereço continuam normais -->
+      <div>
+  <label>Profissão</label>
+  <input type="text" id="profissaoFalecido" placeholder="Ex: Herói">
+</div>
+
+<div>
+  <label>Naturalidade</label>
+  <input type="text" id="naturalFalecido" placeholder="Ex: Bahia">
+</div>
+
+<div>
+  <label>Estado Civil</label>
+  <select id="civilFalecido">
+    <option value="">Selecione</option>
+    <option value="Solteiro(a)">Solteiro(a)</option>
+    <option value="Casado(a)">Casado(a)</option>
+    <option value="Divorciado(a)">Divorciado(a)</option>
+    <option value="Viúvo(a)">Viúvo(a)</option>
+    <option value="Separado(a)">Separado(a)</option>
+    <option value="Desquitado(a)">Desquitado(a)</option>
+    <option value="IGNORADO">Ignorado</option>
+  </select>
+</div>
+
+<div>
+  <label>Endereço:</label>
+  <input type="text" id="enderecoFalecido" placeholder="Ex: Rua X">
+</div>
+
+      <div>
+        <label>Filiação 1</label>
+        <input type="text" id="nomePai" placeholder="Ex: MATHEUS">
+      </div>
+      <div>
+        <label>Filiação 2</label>
+        <input type="text" id="nomeMae" placeholder="Ex: Luciana">
+      </div>
+
+      <!-- Médico -->
+<div class="full" style="margin-top:10px;"><strong>Médico</strong></div>
+<div>
+  <label>Médico</label>
+  <input type="text" id="medico" placeholder="Ex: BATMAN">
+</div>
+<div>
+  <label>Causa da Morte</label>
+  <input type="text" id="causaMorte" placeholder="Ex: Sepse">
+</div>
+
+<!-- Sepultamento + Local lado a lado -->
+<div>
+  <label>Sepultamento/Cremação</label>
+  <select id="Sepultamento">
+    <option value="">Selecione</option>
+    <option value="O Sepultamento">Sepultamento</option>
+    <option value="A Cremação">Cremação</option>
+    <option value="IGNORADO">Ignorado</option>
+  </select>
+</div>
+<div>
+  <label>Local do Sepultamento/Cremação</label>
+  <input type="text" id="localSepultamento" placeholder="Ex: Local">
+</div>
+    </form>
+      <div class="btns">
+        <button id="gerar" type="button">Gerar Termo</button>
+        <button id="copiar" type="button">Copiar</button>
+        <button id="limpar" type="button" style="background:#a72b2b;">Limpar</button>
+      </div>
+    <h3>Termo Gerado:</h3>
+    <textarea id="termo" readonly></textarea>
+  </div>
+
+  <footer>© Desenvolvido por Isaias Rocha</footer>
+<script src="script.js"></script>
+</body>
+</html>

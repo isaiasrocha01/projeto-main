@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #1e2a47;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header .subtitulo {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+header .contato {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+section {
+    margin: 20px 0;
+}
+
+h2 {
+    color: #1e2a47;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #1e2a47;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Esconde os containers inicialmente */
+.hidden {
+    display: none;
+}
+
+/* Exibe ao ser clicado */
+section h2:hover {
+    color: #333;
+    cursor: pointer;
+}
+
+/* Layout principal - Flexbox */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adiciona espaço entre as colunas */
+    margin-top: 40px;
+}
+
+/* Coluna esquerda (70% da largura) */
+.main-content {
+    width: 70%;
+}
+
+/* Coluna direita (30% da largura) */
+.sidebar {
+    width: 58%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste do layout de logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Aplique um estilo na sidebar para que se destaque */
+.sidebar h2 {
+    font-size: 1.8em;
+    color: #1e2a47;
+    margin-bottom: 15px;
+}

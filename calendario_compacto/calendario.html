@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calendário Compacto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/calendario.css">
+</head>
+
+<body class="cald">
+  <header class="cald">
+    <nav class="nav-centralizado">
+      <a href="../index.html"><img src="../imagens/agenciair.png" alt="Logo IR" class="logo-menu" /> 🏠 Home</a>
+      <a href="../curriculo/curriculo.html" target="_blank">Especialidades</a>
+      <a href="../curriculo/sobre.html">Sobre</a>
+      <a href="../projetos/projetos.html">Projetos</a>
+      <a href="../gerador/contato/contato.html">📞 Contato</a>
+    </nav>
+  </header>
+  <section class="meio-do-site-cald">
+    <div class="calendar-wrap" role="application" aria-label="Calendário compacto">
+      <div class="header">
+        <div class="month-nav">
+          <button id="prevMonth" class="btn" title="Mês anterior">◀</button>
+          <div class="title" id="monthTitle">Janeiro 2025</div>
+          <button id="nextMonth" class="btn" title="Próximo mês">▶</button>
+        </div>
+        <div class="controls">
+          <select id="monthSelect" class="select" aria-label="Selecionar mês"></select>
+          <select id="yearSelect" class="select" aria-label="Selecionar ano"></select>
+          <button id="goMetas" class="btn">Ver Metas</button>
+        </div>
+      </div>
+      <div class="weekdays" aria-hidden="false">
+        <div>Dom</div>
+        <div>Seg</div>
+        <div>Ter</div>
+        <div>Qua</div>
+        <div>Qui</div>
+        <div>Sex</div>
+        <div>Sáb</div>
+      </div>
+      <div class="days" id="daysGrid" aria-live="polite"></div>
+      <div class="footer">
+        <div class="small">Clique em um dia para abrir detalhes</div>
+        <div>
+          <button id="todayBtn" class="btn">Hoje</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>

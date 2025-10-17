@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gerador de Termo - Declaração de Nascido Vivo</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="nas">
+  <header class="header-gerador">
+    <nav class="nav-centralizado">
+      <a href="../../index.html"><img src="../../imagens/agenciair.png" alt="Logo IR" class="logo-menu" /> Home</a>
+      <a href="../gerador.html"><button>🏠 Home Gerador</button></a>
+      <a href="../nascimento/nascimento.html"><button>👶 Nascimento</button></a>
+
+      <div class="dropdown">
+        <button>💍 Casamento</button>
+        <div class="dropdown-content">
+          <a href="../casamento civil/casamento civil.html">💼 Civil</a>
+          <a href="../casamento religioso com efeito civil/casamento religioso com efeito civil.html">⛪ Religioso</a>
+        </div>
+      </div>
+
+      <a href="../obito/obito.html"><button>⚰️ Óbito</button></a>
+      <a href="../contato/contato.html"><button>📞 Contato</button></a>
+    </nav>
+  </header>
+
+  </div>
+  <div class="container topo-do-site">
+      <h2 class="nas">Gerador de Termo - Nascimento</h2>
+    <form id="form">
+      <div>
+        <label>Data do Termo</label>
+        <input type="date" id="dataTermo">
+      </div>
+      <div>
+        <label>Declarante</label>
+        <input type="text" id="declarante" placeholder="Ex: MATHEUS">
+      </div>
+
+      <div>
+        <label>Data do Nascimento</label>
+        <input type="date" id="dataNascimento">
+      </div>
+      <div>
+        <label>Hospital</label>
+        <input type="text" id="hospital" placeholder="Ex: HOSPITAL SANTO AMARO, SALVADOR-BA">
+      </div>
+
+      <div>
+        <label>Hora</label>
+        <input type="text" id="hora" placeholder="Ex: 19">
+      </div>
+      <div>
+        <label>Minuto</label>
+        <input type="text" id="minuto" placeholder="Ex: 26">
+      </div>
+
+      <div class="full">
+        <label>Gênero</label>
+        <select id="genero">
+          <option value="">Selecione</option>
+          <option value="MASCULINO">Masculino</option>
+          <option value="FEMININO">Feminino</option>
+          <option value="IGNORADO">Ignorado</option>
+        </select>
+      </div>
+
+      <div class="full">
+        <label>Nome da Criança</label>
+        <input type="text" id="nomeCrianca" placeholder="Ex: João">
+      </div>
+
+      <div class="full">
+        <label>CPF da Criança</label>
+        <input type="text" id="cpf" placeholder="Ex: 000.000.000-00">
+      </div>
+
+      <!-- Filiação 1 -->
+      <div class="full" style="margin-top:10px;"><strong>Filiação 1</strong></div>
+      <div>
+        <label>Nome</label>
+        <input type="text" id="nomePai" placeholder="Ex: João">
+      </div>
+      <div>
+        <label>Profissão</label>
+        <input type="text" id="profissaoPai" placeholder="Ex: Médico(a)">
+      </div>
+      <div>
+        <label>Naturalidade</label>
+        <input type="text" id="naturalPai" placeholder="Ex: Bahia">
+      </div>
+      <div>
+        <label>Estado Civil, Endereço:</label>
+        <input type="text" id="civilPai" placeholder="Ex: Solteiro(a)">
+      </div>
+
+      <!-- Filiação 2 -->
+      <div class="full" style="margin-top:10px;"><strong>Filiação 2</strong></div>
+      <div>
+        <label>Nome</label>
+        <input type="text" id="nomeMae" placeholder="Ex: SHEILA">
+      </div>
+      <div>
+        <label>Profissão</label>
+        <input type="text" id="profissaoMae" placeholder="Ex: Médico(a)">
+      </div>
+      <div>
+        <label>Naturalidade</label>
+        <input type="text" id="naturalMae" placeholder="Ex: Bahia">
+      </div>
+      <div>
+        <label>Estado Civil, Endereço:</label>
+        <input type="text" id="civilMae" placeholder="Ex: Casado(a)">
+      </div>
+
+      <div class="full">
+        <label>Avós</label>
+        <input type="text" id="avos" placeholder="Ex: Arthur, Ana, Bernardo,Francisca">
+      </div>
+
+      <div class="full">
+        <label>Testemunhas</label>
+        <input type="text" id="testemunhas"
+          placeholder="Ex: LANTERNA VERDE, ELETRICISTA, SOLTEIRO e SHAZAM, POLICIAL PENAL, VIÚVO">
+      </div>
+    </form>
+    <div class="btns">
+      <button id="gerar" type="button">Gerar Termo</button>
+      <button id="copiar" type="button">Copiar</button>
+      <button id="limpar" type="button" style="background:#a72b2b;">Limpar</button>
+    </div>
+    <h3>Termo Gerado:</h3>
+    <textarea id="termo" readonly></textarea>
+  </div>
+
+  <footer>© Desenvolvido por Isaias Rocha</footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
